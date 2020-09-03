@@ -1,0 +1,33 @@
+server:
+  port: 7003
+
+spring:
+  application:
+    name: SERVICE-7003
+  boot:
+    admin:
+      client:
+        url:http://localhost:9001
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka/
+zuul:
+  routes:
+    service-7001:
+      path: /service7004/**
+      serviceId: SERVICE-7004
+feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+

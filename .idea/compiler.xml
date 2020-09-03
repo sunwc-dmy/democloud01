@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="service002-7002" />
+        <module name="admin9001" />
+        <module name="service004-7004" />
+        <module name="config9002" />
+        <module name="mq9003" />
+        <module name="swc-eureka-800" />
+        <module name="service001-7001" />
+        <module name="service003-7003" />
+        <module name="service01--7001" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="service01--7001" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin9001" options="-parameters" />
+      <module name="config9002" options="-parameters" />
+      <module name="democloud01" options="-parameters" />
+      <module name="mq9003" options="-parameters" />
+      <module name="service001-7001" options="-parameters" />
+      <module name="service002-7002" options="-parameters" />
+      <module name="service003-7003" options="-parameters" />
+      <module name="service004-7004" options="-parameters" />
+      <module name="service01--7001" options="-parameters" />
+      <module name="swc-basic-900" options="-parameters" />
+      <module name="swc-eureka-800" options="-parameters" />
+      <module name="swc-service-700" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,40 @@
+server:
+  port: 7002
+
+spring:
+  application:
+    name: SERVICE-7002
+  boot:
+    admin:
+      client:
+        url:http://localhost:9001
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka/
+feign:
+  hystrix:
+    enabled: true
+  client:
+    default:
+      #这里时间一定要调长，否则feign客户端会报ReadTimeOut  服务端报Error parsing HTTP request header
+      connectTimeout: 60000
+      readTimeout: 60000
+      loggerLevel: basic
+ribbon:
+  ConnectTimeout: 250 # 连接超时时间（ms），默认值为250ms
+  ReadTimeout: 2000 # 通信超时时间（ms），默认值为2000ms
+  OkToRetryOnAllOperations: true # 是否对所有操作都进行重试
+  MaxAutoRetriesNextServer: 2 # 对同一服务不同实例重试次数（同一服务下集群个数的重试次数）
+  MaxAutoRetries: 2 # 对同一实例重试的次数（单个集群节点服务重试的次数）
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS

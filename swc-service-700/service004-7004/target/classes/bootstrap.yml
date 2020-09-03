@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: prod
+  application:
+    name: SERVICE-7004
+  cloud:
+    config:
+      uri: http://localhost:3301
+      label: master
+      profile: prod
+
+
+---
+spring:
+  profiles: dev
+  application:
+    name: SERVICE-7004
+  boot:
+    admin:
+      client:
+        url:http://localhost:9001
+  cloud:
+    config:
+      uri: http://localhost:9002
+      label: master
+      profile: dev

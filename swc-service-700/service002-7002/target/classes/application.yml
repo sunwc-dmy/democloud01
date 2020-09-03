@@ -1,0 +1,33 @@
+server:
+  port: 7002
+
+spring:
+  application:
+    name: SERVICE-7002
+  boot:
+    admin:
+      client:
+        url:http://localhost:9001
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka/
+feign:
+  hystrix:
+    enabled: true
+  client:
+    default:
+      #这里时间一定要调长，否则feign客户端会报ReadTimeOut  服务端报Error parsing HTTP request header
+      connectTimeout: 60000
+      readTimeout: 60000
+      loggerLevel: basic
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS

@@ -1,0 +1,23 @@
+swc-basic-900
+    --admin9001
+        --springboot-admin服务监控管理页面
+    --config9002
+        --config配置中心
+    --rabbitmq9003
+        --整合rabbimq 发送消息，监听消息
+            --fanout 无路由模式
+            --direct 有路由，严格一对一模式（exchange，routing，queue）
+            --topic  有路由，一对多模式（exchange，routing，不同消费者不同的queue）
+swc-eureka-800 服务注册发现中心
+swc-service-700 服务业务实现
+    --service001-7001：
+        --redis-cluster(redis集群)
+    --service001-7002;
+        --ribbon，feign相互调用
+        --feign中fallback熔断降级
+    --service003-7003：
+        --远程调用服务端实现
+        --zuul网关 
+    --service004-7004:
+        --config配置读取（@value，@ConfigurationProperties）
+        --@RefreshScope 自动更新 ，不需要每次修改git文件后重启服务

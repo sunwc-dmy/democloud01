@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/swc-basic-900/admin9001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/swc-basic-900/config9002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/swc-basic-900/mq9003/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/swc-eureka-800/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/swc-service-700/service001-7001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/swc-service-700/service002-7002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/swc-service-700/service003-7003/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/swc-service-700/service004-7004/src/main/java" charset="UTF-8" />
+  </component>
+</project>

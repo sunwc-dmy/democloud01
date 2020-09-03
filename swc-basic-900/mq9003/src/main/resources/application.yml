@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: MQ-9003
+server:
+  port: 9003
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka/
+management:
+  health:
+    rabbit:
+      enabled: false
