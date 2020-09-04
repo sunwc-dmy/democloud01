@@ -21,3 +21,4 @@ swc-service-700 服务业务实现
     --service004-7004:
         --config配置读取（@value，@ConfigurationProperties）
         --@RefreshScope 自动更新 ，不需要每次修改git文件后重启服务
+        --多线程
